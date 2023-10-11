@@ -10,3 +10,6 @@ cat("Hello, ", userInput, "!\n")
 # Create a new player pbject
 my_object <- data.frame(name = userInput, hp = 10)
 class(my_object) <- "Player"
+
+# Create a new player instance
+person <- new("Person", name = "John", age = 30)
