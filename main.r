@@ -13,7 +13,7 @@ person <- new("Person", name = userInput, hp = 10)
 # Create a new player object
 person2 <- new("Person", name = "Terminator", hp = 30)
 
-# while loop
+# Loop to calculate damage each round
 while (person@hp < 10){
     # Generate random number for the damage
     random_number <- sample(1:10, 1)
