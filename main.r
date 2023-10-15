@@ -7,9 +7,8 @@ userInput <- readline("Please enter your name: ")
 # Start the match
 cat("Hello, ", userInput, "!\n")
 
-# Create a new player pbject
-my_object <- data.frame(name = userInput, hp = 10)
-class(my_object) <- "Player"
+# Create a new player object
+person <- new("Person", name = userInput, hp = 10)
 
-# Create a new player instance
-person <- new("Person", name = "John", age = 30)
+# Create a new player object
+person <- new("Person", name = "Terminator", hp = 30)
