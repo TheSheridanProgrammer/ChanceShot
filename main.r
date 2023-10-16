@@ -11,15 +11,20 @@ cat("Hello, ", userInput, "!\n")
 setClass("Player", slots = list(name = "character", hp = "numeric"))
 
 # Create a new player object
-person <- new("Player", name = userInput, hp = 10)
+userPlayer <- new("Player", name = userInput, hp = 10)
 
 # Create a new player object
-person2 <- new("Player", name = "Terminator", hp = 30)
+computerPlayer <- new("Player", name = "Terminator", hp = 30)
 
 # Loop to calculate damage each round
-while (person@hp <= 10){
-    # Generate random number for the damage
+while (userPlayer@hp <= 10){
+    # User player turn
     random_number <- sample(1:10, 1)
-    person@hp = person@hp - random_number
-    cat("HP is now , ", person@hp, "\n")
+    computerPlayer@hp = computerPlayer@hp - random_number
+    cat("HP is now , ", computerPlayer@hp, "\n")
+
+    # Computer player turn
+    random_number <- sample(1:10, 1)
+    userPlayer@hp = userPlayer@hp - random_number
+    cat("HP is now , ", userPlayer@hp, "\n")
 }
