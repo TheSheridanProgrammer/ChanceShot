@@ -17,14 +17,14 @@ userPlayer <- new("Player", name = userInput, hp = 10)
 computerPlayer <- new("Player", name = "Terminator", hp = 30)
 
 # Loop to calculate damage each round
-while (userPlayer@hp <= 10){
+while (userPlayer@hp > 0){
     # User player turn
     random_number <- sample(1:10, 1)
     computerPlayer@hp = computerPlayer@hp - random_number
-    cat("HP is now , ", computerPlayer@hp, "\n")
+    cat("Computer HP is now", computerPlayer@hp, "\n")
 
     # Computer player turn
     random_number <- sample(1:10, 1)
     userPlayer@hp = userPlayer@hp - random_number
-    cat("HP is now , ", userPlayer@hp, "\n")
+    cat("Your HP is now", userPlayer@hp, "\n")
 }
